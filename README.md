@@ -1,12 +1,12 @@
 vagrant-alfresco-enterprise
 ===========================
 
-Creates a linux VM with vagrant, downloads, installs and runs the lastest Alfresco enterprise build
+Creates a linux VM with vagrant, downloads, installs and runs the lastest Alfresco One Enterprise release
 
 VM
 ---
 - Uses Vagrant Vitualbox provider
-- Creates a VM based on Ubuntu Trusty 64bit
+- Creates a VM based on Ubuntu 14.10 64bit
 - VM with 4 CPUs, 4GB of memory
 - Alfresco is exposed to **local port 8080**
 
@@ -41,7 +41,10 @@ Usage
         http://localhost:8080/
         
 
-
+Known Issues
+---
+- The installation key strokes are designed for 4GB memory setting. Alfresco displays a warning that is accepted 
+  with a enter key (empty line). When changing the memory settings in the Vagrantfile this might break.
 
 
 

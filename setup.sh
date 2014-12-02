@@ -6,9 +6,6 @@ apt-get -y install curl
 apt-get -y install libXinerama1
 apt-get -y install libcups*
 
-#apt-get update
-#apt-get install libreoffice
-
 releasename=alfresco-enterprise-5.0-installer-linux-x64.bin
 
 # Change working dir to vagrant directory
@@ -23,6 +20,7 @@ cp -Rv /vagrant/shared-classes/* tomcat/shared/classes/
 cp -Rv /vagrant/shared-lib/* tomcat/shared/lib/
 cp -Rv /vagrant/amps-repo/* amps/
 cp -Rv /vagrant/amps-share/* amps_share/
+cp -v /vagrant/license/* tomcat/shared/classes/alfresco/extension/license/
 
 # Install amp modules into alfresco.war and share.war
 mmt="/opt/alfresco/java/bin/java -jar /opt/alfresco/bin/alfresco-mmt.jar"
