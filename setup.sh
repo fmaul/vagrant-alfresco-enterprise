@@ -1,12 +1,13 @@
 #!/bin/sh
 
 apt-get update
+apt-get -y upgrade
 apt-get -y install fontconfig
 apt-get -y install curl
 apt-get -y install libXinerama1
 apt-get -y install libcups*
 
-releasename=alfresco-enterprise-5.0-installer-linux-x64.bin
+releasename=alfresco-enterprise-5.0.1-installer-linux-x64.bin
 
 # Change working dir to vagrant directory
 cd /vagrant
