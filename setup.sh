@@ -35,9 +35,9 @@ cp -v /vagrant/license/* tomcat/shared/classes/alfresco/extension/license/
 
 # Install amp modules into alfresco.war and share.war
 mmt="/opt/alfresco/java/bin/java -jar /opt/alfresco/bin/alfresco-mmt.jar"
-$mmt install amps tomcat/webapps/alfresco.war -directory $*
+$mmt install -force amps tomcat/webapps/alfresco.war -directory $*
 $mmt list tomcat/webapps/alfresco.war
-$mmt install amps_share tomcat/webapps/share.war -directory $*
+$mmt install -force amps_share tomcat/webapps/share.war -directory $*
 $mmt list tomcat/webapps/share.war
 
 # Start Alfresco after installation
